@@ -1,0 +1,31 @@
+{
+  "env": {
+    "DATABASE_URL": "@database-url",
+    "NEXTAUTH_SECRET": "@nextauth-secret",
+    "NEXTAUTH_URL": "@nextauth-url",
+    "GOOGLE_CLIENT_ID": "@google-client-id",
+    "GOOGLE_CLIENT_SECRET": "@google-client-secret",
+    "GITHUB_CLIENT_ID": "@github-client-id",
+    "GITHUB_CLIENT_SECRET": "@github-client-secret",
+    "OPENAI_API_KEY": "@openai-api-key",
+    "STRIPE_SECRET_KEY": "@stripe-secret-key",
+    "STRIPE_WEBHOOK_SECRET": "@stripe-webhook-secret",
+    "STRIPE_PRO_MONTHLY_PRICE_ID": "@stripe-pro-monthly-price-id",
+    "STRIPE_PRO_YEARLY_PRICE_ID": "@stripe-pro-yearly-price-id",
+    "STRIPE_TEAM_MONTHLY_PRICE_ID": "@stripe-team-monthly-price-id",
+    "STRIPE_TEAM_YEARLY_PRICE_ID": "@stripe-team-yearly-price-id",
+    "SENTRY_DSN": "@sentry-dsn",
+    "NEXT_PUBLIC_SENTRY_DSN": "@next-public-sentry-dsn"
+  },
+  "build": {
+    "env": {
+      "SENTRY_ORG": "@sentry-org",
+      "SENTRY_PROJECT": "@sentry-project"
+    }
+  },
+  "functions": {
+    "src/app/api/stripe/webhooks/route.ts": {
+      "maxDuration": 30
+    }
+  }
+}
