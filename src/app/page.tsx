@@ -9,9 +9,9 @@ export default function Home() {
               <h1 className="text-xl font-bold text-gray-900">SmartPortfolio</h1>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+              <a href="/auth/signin" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
                 Connexion
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -29,12 +29,12 @@ export default function Home() {
             Votre portfolio reste toujours à jour, sans effort.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-base font-semibold shadow-sm">
+            <a href="/auth/signup" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-base font-semibold shadow-sm">
               Commencer gratuitement
-            </button>
-            <button className="text-gray-900 font-semibold">
+            </a>
+            <a href="/pricing" className="text-gray-900 font-semibold">
               Voir un exemple <span aria-hidden="true">→</span>
-            </button>
+            </a>
           </div>
         </div>
 
