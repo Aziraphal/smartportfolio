@@ -1,10 +1,6 @@
-import { withSentryConfig } from '@sentry/nextjs'
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    instrumentationHook: true,
-  },
   images: {
     domains: [
       'lh3.googleusercontent.com', // Google OAuth
@@ -37,17 +33,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-const sentryWebpackPluginOptions = {
-  org: process.env.SENTRY_ORG,
-  project: process.env.SENTRY_PROJECT,
-  silent: true,
-  widenClientFileUpload: true,
-  reactComponentAnnotation: {
-    enabled: true,
-  },
-  hideSourceMaps: true,
-  disableLogger: true,
-  automaticVercelMonitors: true,
-}
-
-export default withSentryConfig(nextConfig, sentryWebpackPluginOptions)
+export default nextConfig
